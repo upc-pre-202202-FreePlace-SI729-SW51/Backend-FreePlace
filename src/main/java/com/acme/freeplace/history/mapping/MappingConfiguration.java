@@ -1,5 +1,5 @@
 //Put here the entity mappers
-package com.acme.freeplace.histoty.mapping;
+package com.acme.freeplace.history.mapping;
 
 import org.springframework.context.annotation.Configuration;
 
