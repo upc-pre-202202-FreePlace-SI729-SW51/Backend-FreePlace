@@ -3,6 +3,6 @@ package com.acme.freeplace.parkingLots.mapping;
 
 import org.springframework.context.annotation.Configuration;
 
-@Configuration("bookingMappingConfiguration")
+@Configuration("parkingLotMappingConfiguration")
 public class MappingConfiguration {
 }

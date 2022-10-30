@@ -3,6 +3,6 @@ package com.acme.freeplace.security.mapping;
 
 import org.springframework.context.annotation.Configuration;
 
-@Configuration("bookingMappingConfiguration")
+@Configuration("securityMappingConfiguration")
 public class MappingConfiguration {
 }
