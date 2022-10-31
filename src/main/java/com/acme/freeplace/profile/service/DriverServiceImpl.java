@@ -92,5 +92,6 @@ public class DriverServiceImpl implements DriverService {
         return driverRepository.findById(driverId).map(student -> {
             driverRepository.delete(student);
             return ResponseEntity.ok().build();
-        }).orElseThrow(() -> new ResourceNotFoundException(ENTITY, driverId));    }
+        }).orElseThrow(() -> new ResourceNotFoundException(ENTITY, driverId));
+    }
 }
