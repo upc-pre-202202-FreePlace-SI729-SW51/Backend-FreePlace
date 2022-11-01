@@ -85,7 +85,8 @@ public class DriverServiceImpl implements DriverService {
                                         .withContact(request.getContact())
                                         .withCrediCard(request.getCrediCard())
                                         .withNumberCard(request.getNumberCard())))
-                .orElseThrow(() -> new ResourceNotFoundException(ENTITY, driverId));    }
+                .orElseThrow(() -> new ResourceNotFoundException(ENTITY, driverId));
+    }
 
     @Override
     public ResponseEntity<?> delete(Long driverId) {

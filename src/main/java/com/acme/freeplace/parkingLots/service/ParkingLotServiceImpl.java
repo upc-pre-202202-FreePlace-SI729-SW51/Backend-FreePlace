@@ -34,11 +34,13 @@ public class ParkingLotServiceImpl implements ParkingLotService {
 
     @Override
     public List<ParkingLot> getAll() {
+
         return parkingLotRepository.findAll();
     }
 
     @Override
     public Page<ParkingLot> getAll(Pageable pageable) {
+
         return parkingLotRepository.findAll(pageable);
     }
 

@@ -37,5 +37,5 @@ public class Driver {
 
     private Integer crediCard;
 
-    private Integer NumberCard;
+    private Integer numberCard;
 }
