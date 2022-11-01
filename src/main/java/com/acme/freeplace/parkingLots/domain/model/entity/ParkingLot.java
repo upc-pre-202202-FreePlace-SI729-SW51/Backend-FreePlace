@@ -1,4 +1,4 @@
-package com.acme.freeplace.profile.domain.model.entity;
+package com.acme.freeplace.parkingLots.domain.model.entity;
 
 import lombok.*;
 
@@ -6,7 +6,7 @@ import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
-import java.util.Date;
+
 
 @Getter
 @Setter
@@ -14,8 +14,8 @@ import java.util.Date;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "driver")
-public class Driver {
+@Table(name = "parking_lot")
+public class ParkingLot {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,19 +23,19 @@ public class Driver {
 
     @NotNull
     @NotBlank
-    @Size(max = 60)
+    @Size(max = 120)
     @Column(unique = true)
-    private String vehicleNumber;
+    private String addrees;
 
-    private Date registrationDate;
+    private Integer spaceFree;
+
+    private Integer spaceAvailable;
 
     @NotNull
     @NotBlank
-    @Size(max = 60)
+    @Size(max = 120)
     @Column(unique = true)
-    private String contact;
+    private String companyName;
 
-    private Integer crediCard;
 
-    private Integer numberCard;
 }
