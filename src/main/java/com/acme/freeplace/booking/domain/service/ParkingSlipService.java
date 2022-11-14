@@ -1,10 +1,11 @@
 package com.acme.freeplace.booking.domain.service;
 
-import antlr.collections.List;
 import com.acme.freeplace.booking.domain.model.entity.ParkingSlip;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
+
+import java.util.List;
 
 public interface ParkingSlipService {
 
