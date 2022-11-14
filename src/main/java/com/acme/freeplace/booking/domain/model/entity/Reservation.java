@@ -1,7 +1,10 @@
 package com.acme.freeplace.booking.domain.model.entity;
 
+import com.acme.freeplace.booking.resource.CreateReservationResource;
+import com.acme.freeplace.booking.resource.ReservationResource;
 import com.acme.freeplace.parkingLots.domain.model.entity.ParkingLot;
 import com.acme.freeplace.profile.domain.model.entity.Driver;
+import com.acme.freeplace.shared.domain.model.AuditModel;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 
@@ -16,20 +19,18 @@ import java.util.Date;
 @AllArgsConstructor
 @Entity
 @Table(name = "reservation")
-public class Reservation {
+public class Reservation{
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @ManyToOne(fetch = FetchType.EAGER, optional = false)
+    @ManyToOne
     @JoinColumn(name = "driver_id", nullable = false)
-    @JsonIgnore
     private Driver driver;
 
-    @ManyToOne(fetch = FetchType.EAGER, optional = false)
-    @JoinColumn(name = "parkingLot_id", nullable = false)
-    @JsonIgnore
+    @ManyToOne
+    @JoinColumn(name = "parking_lot_id", nullable = false)
     private ParkingLot parkingLot;
 
     private Date startTime;

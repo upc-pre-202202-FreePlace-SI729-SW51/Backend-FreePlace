@@ -1,9 +1,9 @@
 package com.acme.freeplace.booking.resource;
 
-import com.acme.freeplace.parkingLots.domain.model.entity.ParkingLot;
-import com.acme.freeplace.profile.domain.model.entity.Driver;
 import lombok.*;
 
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import java.util.Date;
 
 
@@ -17,9 +17,10 @@ public class ReservationResource {
 
     private Long id;
 
-    private Driver driver;
+    private Long driverId;
 
-    private ParkingLot parkingLot;
+
+    private Long parkingLotId;
 
     private Date startTime;
 
