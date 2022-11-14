@@ -21,8 +21,12 @@ public class UpdateParkingLotResource {
     @Column(unique = true)
     private String addrees;
 
+    @NotNull
+    @NotBlank
     private Integer spaceFree;
 
+    @NotNull
+    @NotBlank
     private Integer spaceAvailable;
 
     @NotNull

@@ -1,15 +1,10 @@
 package com.acme.freeplace.booking.api.rest;
 
+import com.acme.freeplace.booking.domain.model.entity.Reservation;
 import com.acme.freeplace.booking.domain.service.ReservationService;
 import com.acme.freeplace.booking.mapping.ReservationMapper;
 import com.acme.freeplace.booking.resource.CreateReservationResource;
 import com.acme.freeplace.booking.resource.ReservationResource;
-import com.acme.freeplace.parkingLots.resource.CreateParkingLotResource;
-import com.acme.freeplace.parkingLots.resource.ParkingLotResource;
-import com.acme.freeplace.parkingLots.resource.UpdateParkingLotResource;
-import com.acme.freeplace.profile.resource.CreateDriverResource;
-import com.acme.freeplace.profile.resource.DriverResource;
-import com.acme.freeplace.profile.resource.UpdateDriverResource;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
