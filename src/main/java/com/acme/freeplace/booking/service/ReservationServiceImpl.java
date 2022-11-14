@@ -52,7 +52,7 @@ public class ReservationServiceImpl implements ReservationService {
     public Reservation update(Long reservationId, Reservation request) {
         return reservationRepository.findById(reservationId).map(reservation ->
                         reservationRepository.save(
-                                    reservation.withDriver(request.getDriver().getId())
+                                    reservation.withDriver(request.getDriver())
                                         .withParkingLot(request.getParkingLot())
                                         .withStartTime(request.getStartTime())
                                         .withDurationMinutes(request.getDurationMinutes())

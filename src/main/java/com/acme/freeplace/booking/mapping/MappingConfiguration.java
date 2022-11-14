@@ -12,4 +12,6 @@ public class MappingConfiguration {
     public ReservationMapper reservationMapper() {
         return new ReservationMapper();
     }
+
+    @Bean ParkingSlipMapper parkingSlipMapper(){return new ParkingSlipMapper();}
 }
