@@ -9,6 +9,8 @@ import lombok.Setter;
 import javax.persistence.FetchType;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import java.util.Date;
 
 
@@ -18,19 +20,20 @@ public class UpdateReservationResource {
 
     private Long id;
 
-    @ManyToOne(fetch = FetchType.EAGER, optional = false)
-    @JoinColumn(name = "driver_id", nullable = false)
-    @JsonIgnore
-    private Driver driver;
+    @NotNull
+    @NotBlank
+    private Long driverId;
 
-    @ManyToOne(fetch = FetchType.EAGER, optional = false)
-    @JoinColumn(name = "parkingLot_id", nullable = false)
-    @JsonIgnore
-    private ParkingLot parkingLot;
-
+    @NotNull
+    @NotBlank
+    private Long parkingLotId;
+    @NotNull
+    @NotBlank
     private Date startTime;
-
+    @NotNull
+    @NotBlank
     private Date durationMinutes;
-
+    @NotNull
+    @NotBlank
     private Date bookingDate;
 }
