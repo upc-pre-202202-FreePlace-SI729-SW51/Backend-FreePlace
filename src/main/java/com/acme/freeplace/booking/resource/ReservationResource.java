@@ -1,5 +1,8 @@
 package com.acme.freeplace.booking.resource;
 
+import com.acme.freeplace.parkingLots.resource.ParkingLotResource;
+import com.acme.freeplace.profile.domain.model.entity.Driver;
+import com.acme.freeplace.profile.resource.DriverResource;
 import lombok.*;
 
 import javax.validation.constraints.NotBlank;
@@ -18,7 +21,6 @@ public class ReservationResource {
     private Long id;
 
     private Long driverId;
-
 
     private Long parkingLotId;
 
