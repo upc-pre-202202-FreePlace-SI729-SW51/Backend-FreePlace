@@ -12,4 +12,9 @@ public class MappingConfiguration {
     public ParkingLotMapper parkingLotMapper() {
         return new ParkingLotMapper();
     }
+
+    @Bean
+    public OwnerCompanyMapper ownerCompanyMapper(){
+        return new OwnerCompanyMapper();
+    }
 }
