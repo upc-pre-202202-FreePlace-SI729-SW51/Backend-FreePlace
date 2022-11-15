@@ -1,7 +1,6 @@
 //Put here the entity mappers
 package com.acme.freeplace.booking.mapping;
 
-import com.acme.freeplace.profile.mapping.DriverMapper;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -14,4 +13,7 @@ public class MappingConfiguration {
     }
 
     @Bean ParkingSlipMapper parkingSlipMapper(){return new ParkingSlipMapper();}
+
+    @Bean
+    ReviewsMapper reviewsMapper(){return new ReviewsMapper();}
 }
