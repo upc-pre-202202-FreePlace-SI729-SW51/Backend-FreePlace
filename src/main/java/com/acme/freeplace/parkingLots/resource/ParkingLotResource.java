@@ -1,6 +1,7 @@
 package com.acme.freeplace.parkingLots.resource;
 
 
+import com.acme.freeplace.parkingLots.domain.model.entity.Owner;
 import lombok.*;
 
 @Getter
@@ -11,12 +12,12 @@ import lombok.*;
 public class ParkingLotResource {
 
     private Long id;
-
-    private String addrees;
-
-    private Integer spaceFree;
+  
+    private Long owner;
 
     private Integer spaceAvailable;
 
-    private String companyName;
+    private Integer spaceFree;
+
+    private Integer cost;
 }
