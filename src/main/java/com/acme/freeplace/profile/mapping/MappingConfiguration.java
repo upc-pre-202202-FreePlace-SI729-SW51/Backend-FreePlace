@@ -10,7 +10,6 @@ public class MappingConfiguration {
     public DriverMapper driverMapper() {
         return new DriverMapper();
     }
-
     @Bean
     public CreditCardMapper creditCardMapper(){
         return new CreditCardMapper();

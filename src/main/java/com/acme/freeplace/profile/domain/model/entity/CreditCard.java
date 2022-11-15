@@ -20,17 +20,20 @@ public class CreditCard {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-
     @NotNull
     @NotBlank
     private String type;
+
     @NotNull
     @NotBlank
     private String cardNumber;
 
-    private Date dateExpiration;
     @NotNull
     @NotBlank
-    private String cvi;
+    private Date dateExpiration;
+
+    @NotNull
+    @NotBlank
+    private String CVI;
 
 }

@@ -15,7 +15,6 @@ public class CreditCardMapper {
     @Autowired
     EnhancedModelMapper mapper;
 
-
     public CreditCardResource toResource(CreditCard model) {
         return mapper.map(model, CreditCardResource.class);
     }

@@ -70,7 +70,6 @@ public class ReservationServiceImpl implements ReservationService {
                         reservationRepository.save(
                                     reservation.withDriver(request.getDriver())
                                         .withParkingLot(request.getParkingLot())
-                                        .withStartTime(request.getStartTime())
                                         .withDurationMinutes(request.getDurationMinutes())
                                         .withBookingDate(request.getBookingDate())))
                 .orElseThrow(() -> new ResourceNotFoundException(ENTITY, reservationId));

@@ -13,12 +13,8 @@ import java.util.Date;
 @AllArgsConstructor
 public class CreateCreditCardResource {
 
-
     private String type;
-
     private String cardNumber;
-
     private Date dateExpiration;
-
-    private String cvi;
+    private String CVI;
 }

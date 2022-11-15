@@ -18,19 +18,15 @@ public class DriverMapper  implements Serializable {
 
     @Autowired
     EnhancedModelMapper mapper;
-
     public DriverResource toResource(Driver model) {
         return mapper.map(model, DriverResource.class);
     }
-
     public Driver toModel(CreateDriverResource resource) {
         return mapper.map(resource, Driver.class);
     }
-
     public Driver toModel(UpdateDriverResource resource) {
         return mapper.map(resource, Driver.class);
     }
-
     public Page<DriverResource> modelListPage(List<Driver> modelList, Pageable pageable) {
         return new PageImpl<>(mapper.mapList(modelList, DriverResource.class), pageable, modelList.size());
     }

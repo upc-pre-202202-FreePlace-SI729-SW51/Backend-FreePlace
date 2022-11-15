@@ -29,9 +29,9 @@ public class ParkingLot {
     @JoinColumn(name = "owner", nullable = false)
     private Owner owner;
 
-    private Integer spaceAvailable;
+    private Long spaceAvailable;
 
-    private Integer spaceFree;
+    private Long spaceFree;
 
-    private Integer cost;
+    private Long cost;
 }

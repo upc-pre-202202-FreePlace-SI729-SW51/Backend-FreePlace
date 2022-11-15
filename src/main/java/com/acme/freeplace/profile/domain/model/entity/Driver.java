@@ -25,13 +25,14 @@ public class Driver{
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
+    @ManyToOne
+    @JoinColumn(name = "credit_card", nullable = false)
+    private CreditCard creditCard;
+
     @NotNull
     @NotBlank
-    @Size(max = 60)
-    @Column(unique = true)
-    private String vehicleNumber;
+    private String fullName;
 
-    private Date registrationDate;
 
     @NotNull
     @NotBlank
@@ -39,9 +40,10 @@ public class Driver{
     @Column(unique = true)
     private String contact;
 
-    private Integer crediCard;
-
-    private Integer numberCard;
-
+    @NotNull
+    @NotBlank
+    @Size(max = 60)
+    @Column(unique = true)
+    private String vehicleNumber;
 
 }
