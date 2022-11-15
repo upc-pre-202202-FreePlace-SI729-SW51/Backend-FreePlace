@@ -81,10 +81,10 @@ public class DriverServiceImpl implements DriverService {
         return driverRepository.findById(driverId).map(student ->
                         driverRepository.save(
                                 student.withVehicleNumber(request.getVehicleNumber())
-                                        .withRegistrationDate(request.getRegistrationDate())
+                                        .withCreditCard(request.getCreditCard())
+                                        .withFullName(request.getFullName())
                                         .withContact(request.getContact())
-                                        .withCrediCard(request.getCrediCard())
-                                        .withNumberCard(request.getNumberCard())))
+                                        .withVehicleNumber(request.getVehicleNumber())))
                 .orElseThrow(() -> new ResourceNotFoundException(ENTITY, driverId));
     }
 

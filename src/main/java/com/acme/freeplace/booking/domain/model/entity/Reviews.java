@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
 
 @Getter
 @Setter
@@ -23,8 +24,12 @@ public class Reviews {
     @JsonIgnore
     private Reservation reservation;
 
+    @NonNull
+    @NotBlank
     private String comment;
 
+    @NonNull
+    @NotBlank
     private Long stars;
 
 }

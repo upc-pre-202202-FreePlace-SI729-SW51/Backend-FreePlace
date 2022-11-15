@@ -52,7 +52,7 @@ public class CreditCardServiceImpl implements CreditCardService {
                                 creditCard.withType(request.getType())
                                         .withCardNumber(request.getCardNumber())
                                         .withDateExpiration(request.getDateExpiration())
-                                        .withCvi(request.getCvi())))
+                                        .withCVI(request.getCVI())))
                 .orElseThrow(() -> new ResourceNotFoundException(ENTITY, creditCardId));
     }
 

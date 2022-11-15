@@ -1,8 +1,11 @@
 package com.acme.freeplace.profile.resource;
 
+import com.acme.freeplace.profile.domain.model.entity.CreditCard;
 import lombok.*;
 
 import javax.persistence.Column;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
@@ -16,22 +19,12 @@ import java.util.Date;
 @AllArgsConstructor
 public class CreateDriverResource {
 
+    private CreditCard creditCard;
 
-    @NotNull
-    @NotBlank
-    @Size(max = 60)
-    @Column(unique = true)
-    private String vehicleNumber;
+    private String fullName;
 
-    private Date registrationDate;
-
-    @NotNull
-    @NotBlank
-    @Size(max = 60)
-    @Column(unique = true)
     private String contact;
 
-    private Integer crediCard;
+    private String vehicleNumber;
 
-    private Integer NumberCard;
 }

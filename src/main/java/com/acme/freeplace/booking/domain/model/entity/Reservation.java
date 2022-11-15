@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
 import java.util.Date;
 
 
@@ -33,10 +34,12 @@ public class Reservation{
     @JoinColumn(name = "parking_lot_id", nullable = false)
     private ParkingLot parkingLot;
 
-    private Date startTime;
-
+    @NonNull
+    @NotBlank
     private Date durationMinutes;
 
+    @NonNull
+    @NotBlank
     private Date bookingDate;
 
 }
