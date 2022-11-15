@@ -22,7 +22,7 @@ public class UpdateReviewResource {
     @JsonIgnore
     private Reservation reservation;
 
-    private String coment;
-    private Long strars;
+    private String comment;
+    private Long stars;
 
 }

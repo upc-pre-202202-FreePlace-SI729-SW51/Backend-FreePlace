@@ -23,7 +23,7 @@ public class Reviews {
     @JsonIgnore
     private Reservation reservation;
 
-    private String coments;
+    private String comment;
 
     private Long stars;
 
