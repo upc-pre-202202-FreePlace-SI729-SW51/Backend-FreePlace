@@ -6,12 +6,15 @@ import lombok.Setter;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
+import javax.persistence.Column;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 
 @Getter
 @Setter
 public class UpdateParkingLotResource {
-
     @NotNull
     @NotBlank
     private Long id;
@@ -27,6 +30,4 @@ public class UpdateParkingLotResource {
     @NotNull
     @NotBlank
     private Integer cost;
-
-
 }

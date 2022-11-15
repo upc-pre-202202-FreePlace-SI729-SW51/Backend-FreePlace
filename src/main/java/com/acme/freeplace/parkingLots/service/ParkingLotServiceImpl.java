@@ -52,13 +52,21 @@ public class ParkingLotServiceImpl implements ParkingLotService {
 
     @Override
     public ParkingLot create(ParkingLot parkingLot) {
+        Set<ConstraintViolation<ParkingLot>>violations=validator.validate(parkingLot);
 
+        if (!violations.isEmpty())
+            throw new ResourceValidationException(ENTITY, violations);
+      
+        ParkingLot parkingLotWithName = parkingLotRepository.findByCompanyName(parkingLot.getCompanyName());
+
+        if(parkingLotWithName != null)
+            throw new ResourceValidationException(ENTITY,
+                    "An driver with the same name already exists.");
         return parkingLotRepository.save(parkingLot);
     }
 
     @Override
     public ParkingLot update(Long parkingLotId, ParkingLot request) {
-
         return parkingLotRepository.findById(parkingLotId).map(student ->
                         parkingLotRepository.save(
                                 student.withOwner(request.getOwner())

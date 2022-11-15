@@ -24,7 +24,7 @@ public class ParkingLot {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-
+  
     @ManyToOne
     @JoinColumn(name = "owner", nullable = false)
     private Owner owner;
@@ -34,6 +34,4 @@ public class ParkingLot {
     private Integer spaceFree;
 
     private Integer cost;
-
-
 }
