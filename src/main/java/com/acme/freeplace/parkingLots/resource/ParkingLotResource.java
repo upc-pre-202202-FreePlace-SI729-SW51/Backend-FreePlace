@@ -12,7 +12,7 @@ import lombok.*;
 public class ParkingLotResource {
 
     private Long id;
-
+  
     private Long owner;
 
     private Integer spaceAvailable;
@@ -20,6 +20,4 @@ public class ParkingLotResource {
     private Integer spaceFree;
 
     private Integer cost;
-
-
 }

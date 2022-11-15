@@ -1,16 +1,13 @@
 //Put here the entity mappers
 package com.acme.freeplace.parkingLots.mapping;
 
-<<<<<<< Updated upstream
-=======
 import org.springframework.context.annotation.Bean;
->>>>>>> Stashed changes
+import com.acme.freeplace.profile.mapping.DriverMapper;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration("parkingLotMappingConfiguration")
 public class MappingConfiguration {
-<<<<<<< Updated upstream
-=======
 
     @Bean
     public ParkingLotMapper parkingLotMapper() {
@@ -21,5 +18,4 @@ public class MappingConfiguration {
     public OwnerMapper ownerCompanyMapper(){
         return new OwnerMapper();
     }
->>>>>>> Stashed changes
 }

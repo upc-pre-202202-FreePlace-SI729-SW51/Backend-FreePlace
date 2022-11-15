@@ -85,12 +85,14 @@ public class DriverServiceImpl implements DriverService {
                                         .withContact(request.getContact())
                                         .withCrediCard(request.getCrediCard())
                                         .withNumberCard(request.getNumberCard())))
-                .orElseThrow(() -> new ResourceNotFoundException(ENTITY, driverId));    }
+                .orElseThrow(() -> new ResourceNotFoundException(ENTITY, driverId));
+    }
 
     @Override
     public ResponseEntity<?> delete(Long driverId) {
         return driverRepository.findById(driverId).map(student -> {
             driverRepository.delete(student);
             return ResponseEntity.ok().build();
-        }).orElseThrow(() -> new ResourceNotFoundException(ENTITY, driverId));    }
+        }).orElseThrow(() -> new ResourceNotFoundException(ENTITY, driverId));
+    }
 }
