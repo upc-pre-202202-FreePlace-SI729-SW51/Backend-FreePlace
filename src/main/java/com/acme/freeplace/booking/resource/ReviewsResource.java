@@ -9,7 +9,7 @@ public class ReviewsResource {
 
     private Reservation reservation;
 
-    private String coment;
+    private String comment;
 
     private Long starts;
 }
