@@ -51,7 +51,7 @@ public class ReviewServiceImpl implements ReviewService {
     public Reviews Update(Long reviewId, Reviews reviews) {
         return reviewRepository.findById(reviewId).map(review->reviewRepository.save(
                 reviews.withReservation(reviews.getReservation())
-                        .withComents(reviews.getComents())
+                        .withComment(reviews.getComment())
                         .withStars(reviews.getStars())))
                 .orElseThrow(()->new ResourceNotFoundException(ENTITY,reviewId));
     }
