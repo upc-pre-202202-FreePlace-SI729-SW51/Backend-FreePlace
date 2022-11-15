@@ -24,24 +24,14 @@ public class ParkingLot {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-
-    @NotNull
-    @NotBlank
-    @Size(max = 120)
-    @Column(unique = true)
-    private String addrees;
-
-    private Integer spaceFree;
+  
+    @ManyToOne
+    @JoinColumn(name = "owner", nullable = false)
+    private Owner owner;
 
     private Integer spaceAvailable;
 
-    @NotNull
-    @NotBlank
-    @Size(max = 120)
-    @Column(unique = true)
-    private String companyName;
+    private Integer spaceFree;
 
-
-
-
+    private Integer cost;
 }

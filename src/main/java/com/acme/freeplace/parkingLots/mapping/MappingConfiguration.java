@@ -1,6 +1,7 @@
 //Put here the entity mappers
 package com.acme.freeplace.parkingLots.mapping;
 
+import org.springframework.context.annotation.Bean;
 import com.acme.freeplace.profile.mapping.DriverMapper;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -14,7 +15,7 @@ public class MappingConfiguration {
     }
 
     @Bean
-    public OwnerCompanyMapper ownerCompanyMapper(){
-        return new OwnerCompanyMapper();
+    public OwnerMapper ownerCompanyMapper(){
+        return new OwnerMapper();
     }
 }

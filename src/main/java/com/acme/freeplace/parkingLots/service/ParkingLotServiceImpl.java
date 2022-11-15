@@ -52,43 +52,27 @@ public class ParkingLotServiceImpl implements ParkingLotService {
 
     @Override
     public ParkingLot create(ParkingLot parkingLot) {
-
         Set<ConstraintViolation<ParkingLot>>violations=validator.validate(parkingLot);
 
         if (!violations.isEmpty())
             throw new ResourceValidationException(ENTITY, violations);
-
-        // Name Uniqueness validation
+      
         ParkingLot parkingLotWithName = parkingLotRepository.findByCompanyName(parkingLot.getCompanyName());
 
         if(parkingLotWithName != null)
             throw new ResourceValidationException(ENTITY,
                     "An driver with the same name already exists.");
-
         return parkingLotRepository.save(parkingLot);
     }
 
     @Override
     public ParkingLot update(Long parkingLotId, ParkingLot request) {
-
-        Set<ConstraintViolation<ParkingLot>> violations = validator.validate(request);
-
-        if (!violations.isEmpty())
-            throw new ResourceValidationException(ENTITY, violations);
-
-        // Name Uniqueness validation
-        ParkingLot parkingLotWithName = parkingLotRepository.findByCompanyName(request.getCompanyName());
-
-        if(parkingLotWithName != null && !parkingLotWithName.getId().equals(parkingLotId))
-            throw new ResourceValidationException(ENTITY,
-                    "An parking lot with the same name already exists.");
-
         return parkingLotRepository.findById(parkingLotId).map(student ->
                         parkingLotRepository.save(
-                                student.withAddrees(request.getAddrees())
-                                        .withSpaceFree(request.getSpaceFree())
+                                student.withOwner(request.getOwner())
                                         .withSpaceAvailable(request.getSpaceAvailable())
-                                        .withCompanyName(request.getCompanyName())))
+                                        .withSpaceFree(request.getSpaceFree())
+                                        .withCost(request.getCost())))
                 .orElseThrow(() -> new ResourceNotFoundException(ENTITY, parkingLotId));
 
     }
