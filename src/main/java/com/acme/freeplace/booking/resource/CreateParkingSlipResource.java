@@ -8,6 +8,8 @@ import lombok.*;
 import javax.persistence.FetchType;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import java.util.Date;
 
 @Getter
@@ -17,14 +19,23 @@ import java.util.Date;
 @AllArgsConstructor
 public class CreateParkingSlipResource {
 
-    @OneToOne(fetch= FetchType.EAGER, optional = false)
-    @JoinColumn(name = "reservation_id",nullable = false)
-    @JsonIgnore
+    @NotNull
+    @NotBlank
+    private Long reservationId;
+
+    @NotNull
+    @NotBlank
     private Reservation reservation;
 
+    @NotNull
+    @NotBlank
     private Date entryTime;
 
+    @NotNull
+    @NotBlank
     private Date entryExit;
 
+    @NotNull
+    @NotBlank
     private Number totalCost;
 }

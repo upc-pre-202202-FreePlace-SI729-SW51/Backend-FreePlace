@@ -15,7 +15,7 @@ public class ParkingSlipResource {
 
     private Long id;
 
-    private Reservation reservation;
+    private Long reservation;
 
     private Date entryTime;
 

@@ -48,11 +48,11 @@ public class ReviewServiceImpl implements ReviewService {
     }
 
     @Override
-    public Reviews Update(Long reviewId, Reviews reviews) {
+    public Reviews Update(Long reviewId, Reviews request) {
         return reviewRepository.findById(reviewId).map(review->reviewRepository.save(
-                reviews.withReservation(reviews.getReservation())
-                        .withComment(reviews.getComment())
-                        .withStars(reviews.getStars())))
+                review.withReservation(request.getReservation())
+                        .withComment(request.getComment())
+                        .withStars(request.getStars())))
                 .orElseThrow(()->new ResourceNotFoundException(ENTITY,reviewId));
     }
 

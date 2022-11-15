@@ -18,14 +18,19 @@ public class UpdateParkingSlipResource {
 
     private Long id;
 
-    @OneToOne(fetch= FetchType.EAGER, optional = false)
-    @JoinColumn(name = "reservation_id",nullable = false)
-    @JsonIgnore
+    @NotNull
+    @NotBlank
     private Reservation reservation;
 
+    @NotNull
+    @NotBlank
     private Date entryTime;
 
+    @NotNull
+    @NotBlank
     private Date entryExit;
 
+    @NotNull
+    @NotBlank
     private Number totalCost;
 }
