@@ -1,5 +1,7 @@
 package com.acme.freeplace.shared.mapping;
 
+import com.acme.freeplace.booking.domain.model.entity.Reservation;
+import com.acme.freeplace.booking.resource.ReservationResource;
 import org.modelmapper.ModelMapper;
 
 import java.util.List;
