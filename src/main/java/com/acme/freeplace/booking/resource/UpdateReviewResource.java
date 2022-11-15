@@ -9,6 +9,8 @@ import javax.persistence.FetchType;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import java.util.Date;
 
 @Getter
@@ -17,12 +19,16 @@ public class UpdateReviewResource {
 
     private Long id;
 
-    @ManyToOne(fetch= FetchType.EAGER, optional = false)
-    @JoinColumn(name = "reservation_id",nullable = false)
-    @JsonIgnore
+    @NotNull
+    @NotBlank
     private Reservation reservation;
 
+    @NotNull
+    @NotBlank
     private String comment;
+
+    @NotNull
+    @NotBlank
     private Long stars;
 
 }
