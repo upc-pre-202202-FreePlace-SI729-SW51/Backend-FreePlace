@@ -28,8 +28,7 @@ public class Reviews {
     @NotBlank
     private String comment;
 
-    @NonNull
-    @NotBlank
-    private Long stars;
+
+    private Integer stars;
 
 }

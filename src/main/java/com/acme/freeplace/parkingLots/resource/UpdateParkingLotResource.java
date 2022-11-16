@@ -15,12 +15,11 @@ import javax.validation.constraints.Size;
 @Getter
 @Setter
 public class UpdateParkingLotResource {
-    @NotNull
-    @NotBlank
+
     private Long id;
     @NotNull
     @NotBlank
-    private Long owner;
+    private Long ownerId;
     @NotNull
     @NotBlank
     private Integer spaceAvailable;

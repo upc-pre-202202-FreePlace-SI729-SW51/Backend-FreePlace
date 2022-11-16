@@ -34,12 +34,13 @@ public class Reservation{
     @JoinColumn(name = "parking_lot_id", nullable = false)
     private ParkingLot parkingLot;
 
-    @NonNull
-    @NotBlank
+
+
     private Date durationMinutes;
 
-    @NonNull
-    @NotBlank
+
     private Date bookingDate;
+
+    private Date startTime;
 
 }

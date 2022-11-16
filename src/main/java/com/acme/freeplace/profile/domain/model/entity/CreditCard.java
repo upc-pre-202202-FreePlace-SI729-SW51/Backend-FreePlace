@@ -1,6 +1,7 @@
 package com.acme.freeplace.profile.domain.model.entity;
 
 import lombok.*;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
@@ -27,7 +28,6 @@ public class CreditCard {
     @NotNull
     @NotBlank
     private String cardNumber;
-
 
     private Date dateExpiration;
 

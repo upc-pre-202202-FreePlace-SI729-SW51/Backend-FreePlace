@@ -14,15 +14,20 @@ public class UpdateOwnerResource {
 
     @NotNull
     @NotBlank
-    private String addrees;
+    private String nameCompany;
 
     @NotNull
     @NotBlank
-    private Integer spaceFree;
+    private String address;
     @NotNull
     @NotBlank
-    private Integer spaceAvailable;
+    private String  description;
+
     @NotNull
     @NotBlank
-    private String companyName;
+    private String contact;
+    @NotNull
+    @NotBlank
+    private String ownerType;
+
 }

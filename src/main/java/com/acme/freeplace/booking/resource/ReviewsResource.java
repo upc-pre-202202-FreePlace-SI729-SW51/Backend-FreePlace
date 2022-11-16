@@ -12,9 +12,9 @@ import lombok.*;
 public class ReviewsResource {
     private Long id;
 
-    private Long reservation;
+    private Long reservationId;
 
     private String comment;
 
-    private Long starts;
+    private Integer starts;
 }

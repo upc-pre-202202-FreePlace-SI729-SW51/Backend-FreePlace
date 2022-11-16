@@ -31,11 +31,9 @@ public class CreateParkingSlipResource {
     @NotBlank
     private Date entryTime;
 
-    @NotNull
-    @NotBlank
-    private Date entryExit;
 
-    @NotNull
-    @NotBlank
+    private Date exitTime;
+
+
     private Number totalCost;
 }

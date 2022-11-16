@@ -22,15 +22,11 @@ public class CreateReviewResource {
     @NotBlank
     private Long reservationId;
 
-    @NotNull
-    @NotBlank
-    private Reservation reservation;
 
     @NotNull
     @NotBlank
     private String comment;
 
-    @NotNull
-    @NotBlank
-    private Long stars;
+
+    private Integer stars;
 }

@@ -53,7 +53,7 @@ public class ParkingSlipServiceImpl implements ParkingSlipService {
        return parkingSlipRepository.findById(parkingSlipId).map(parkingSlip->parkingSlipRepository.save(
                parkingSlip.withReservation(request.getReservation())
                        .withEntryTime(request.getEntryTime())
-                       .withEntryExit(request.getEntryExit())
+                       .withEntryTime(request.getEntryTime())
                        .withTotalCost(request.getTotalCost())))
                .orElseThrow(()->new ResourceNotFoundException(ENTITY,parkingSlipId));
     }

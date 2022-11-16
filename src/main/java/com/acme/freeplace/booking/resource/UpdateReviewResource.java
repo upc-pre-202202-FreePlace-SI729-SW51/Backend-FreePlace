@@ -21,7 +21,7 @@ public class UpdateReviewResource {
 
     @NotNull
     @NotBlank
-    private Reservation reservation;
+    private Reservation reservationId;
 
     @NotNull
     @NotBlank
@@ -29,6 +29,6 @@ public class UpdateReviewResource {
 
     @NotNull
     @NotBlank
-    private Long stars;
+    private Integer stars;
 
 }

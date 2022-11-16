@@ -14,13 +14,11 @@ import java.util.Date;
 @Setter
 public class UpdateDriverResource {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @ManyToOne
-    @JoinColumn(name = "credit_card", nullable = false)
-    private CreditCard creditCard;
+    @NotNull
+    @NotBlank
+    private Long creditCardId;
 
     @NotNull
     @NotBlank
@@ -29,13 +27,9 @@ public class UpdateDriverResource {
 
     @NotNull
     @NotBlank
-    @Size(max = 60)
-    @Column(unique = true)
     private String contact;
 
     @NotNull
     @NotBlank
-    @Size(max = 60)
-    @Column(unique = true)
     private String vehicleNumber;
 }

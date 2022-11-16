@@ -18,7 +18,7 @@ public class CreateParkingLotResource {
 
     @NotNull
     @NotBlank
-    private Long owner;
+    private Long ownerId;
     @NotNull
     @NotBlank
     private Integer spaceAvailable;
