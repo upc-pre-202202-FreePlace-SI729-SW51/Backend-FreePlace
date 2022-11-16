@@ -21,5 +21,5 @@ public class CreditCardResource {
 
     private Date dateExpiration;
 
-    private String CVI;
+    private String cvi;
 }

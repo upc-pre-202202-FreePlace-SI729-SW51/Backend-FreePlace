@@ -18,19 +18,15 @@ public class UpdateCreditCardResource {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @NotBlank
-    @NotNull
+
     private String type;
 
-    @NotBlank
-    @NotNull
+
     private String cardNumber;
 
-    @NotBlank
-    @NotNull
+
     private Date dateExpiration;
 
-    @NotBlank
-    @NotNull
-    private String CVI;
+
+    private String cvi;
 }
