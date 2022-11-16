@@ -27,13 +27,11 @@ public class ParkingSlip {
     @JsonIgnore
     private Reservation reservation;
 
-    @NotNull
-    @NotBlank
+
     private Date entryTime;
 
-    @NotNull
-    @NotBlank
-    private Date entryExit;
+
+    private Date exitTime;
 
     @NotNull
     @NotBlank

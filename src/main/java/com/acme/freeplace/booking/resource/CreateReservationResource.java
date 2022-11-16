@@ -29,17 +29,16 @@ public class CreateReservationResource {
     @NotBlank
     private Long parkingLotId;
 
-    @NotNull
-    @NotBlank
-    private Date startTime;
 
-    @NotNull
-    @NotBlank
     private Date durationMinutes;
 
-    @NotNull
-    @NotBlank
     private Date bookingDate;
+
+
+    private Date startTime;
+
+
+
 
 
 

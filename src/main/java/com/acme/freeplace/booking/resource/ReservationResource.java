@@ -24,9 +24,10 @@ public class ReservationResource {
 
     private Long parkingLotId;
 
-    private Date startTime;
 
     private Date durationMinutes;
 
     private Date bookingDate;
+    private Date startTime;
+
 }

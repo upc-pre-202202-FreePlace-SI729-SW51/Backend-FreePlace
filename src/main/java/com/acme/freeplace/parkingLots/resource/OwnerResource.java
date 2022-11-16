@@ -2,6 +2,9 @@ package com.acme.freeplace.parkingLots.resource;
 
 import lombok.*;
 
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
+
 @Getter
 @Setter
 @With
@@ -12,16 +15,15 @@ public class OwnerResource {
 
     private Long id;
 
+    private String nameCompany;
+
 
     private String address;
 
+    private String  description;
 
-    private Integer spaceFree;
 
-    private Integer spaceAvailable;
-
-    private String companyName;
-
+    private String contact;
 
     private String ownerType;
 

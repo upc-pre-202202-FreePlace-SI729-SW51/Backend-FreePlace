@@ -4,6 +4,9 @@ package com.acme.freeplace.parkingLots.resource;
 import com.acme.freeplace.parkingLots.domain.model.entity.Owner;
 import lombok.*;
 
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
+
 @Getter
 @Setter
 @With
@@ -12,8 +15,9 @@ import lombok.*;
 public class ParkingLotResource {
 
     private Long id;
-  
-    private Long owner;
+
+
+    private Long ownerId;
 
     private Integer spaceAvailable;
 

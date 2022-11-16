@@ -19,7 +19,7 @@ import java.util.Date;
 @AllArgsConstructor
 public class CreateDriverResource {
 
-    private CreditCard creditCard;
+    private Long creditCardId;
 
     private String fullName;
 

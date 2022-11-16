@@ -22,13 +22,10 @@ public class UpdateParkingSlipResource {
     @NotBlank
     private Reservation reservation;
 
-    @NotNull
-    @NotBlank
     private Date entryTime;
 
-    @NotNull
-    @NotBlank
-    private Date entryExit;
+
+    private Date exitTime;
 
     @NotNull
     @NotBlank
