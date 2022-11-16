@@ -33,9 +33,7 @@ public class ParkingSlip {
 
     private Date exitTime;
 
-    @NotNull
-    @NotBlank
-    private Number totalCost;
+    private Integer totalCost;
 
 
 }
