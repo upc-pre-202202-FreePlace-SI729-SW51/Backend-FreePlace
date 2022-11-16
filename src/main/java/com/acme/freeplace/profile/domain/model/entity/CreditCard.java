@@ -28,12 +28,11 @@ public class CreditCard {
     @NotBlank
     private String cardNumber;
 
-    @NotNull
-    @NotBlank
+
     private Date dateExpiration;
 
     @NotNull
     @NotBlank
-    private String CVI;
+    private String cvi;
 
 }

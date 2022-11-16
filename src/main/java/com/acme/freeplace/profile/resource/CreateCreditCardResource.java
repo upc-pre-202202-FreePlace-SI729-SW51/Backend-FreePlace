@@ -16,5 +16,5 @@ public class CreateCreditCardResource {
     private String type;
     private String cardNumber;
     private Date dateExpiration;
-    private String CVI;
+    private String cvi;
 }
