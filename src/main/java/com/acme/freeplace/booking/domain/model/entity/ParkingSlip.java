@@ -15,7 +15,7 @@ import java.util.Date;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "parking_slip")
+@Table(name = "parking_slips")
 public class ParkingSlip {
 
     @Id

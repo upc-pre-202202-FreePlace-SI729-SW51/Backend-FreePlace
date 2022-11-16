@@ -13,7 +13,7 @@ import javax.validation.constraints.NotBlank;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "review")
+@Table(name = "reviews")
 public class Reviews {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

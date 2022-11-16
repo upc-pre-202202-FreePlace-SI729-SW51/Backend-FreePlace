@@ -19,7 +19,7 @@ import java.util.Date;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "reservation")
+@Table(name = "reservations")
 public class Reservation{
 
     @Id
