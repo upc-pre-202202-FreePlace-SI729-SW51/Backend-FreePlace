@@ -14,7 +14,7 @@ import java.util.Date;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "credit_Card")
+@Table(name = "credit_Cards")
 public class CreditCard {
 
     @Id

@@ -18,7 +18,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "driver")
+@Table(name = "drivers")
 public class Driver{
 
     @Id

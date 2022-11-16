@@ -14,7 +14,7 @@ import javax.validation.constraints.Size;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "owner_company")
+@Table(name = "owners")
 public class Owner {
 
     @Id
