@@ -23,17 +23,11 @@ public class CreateParkingSlipResource {
     @NotBlank
     private Long reservationId;
 
-    @NotNull
-    @NotBlank
-    private Reservation reservation;
-
-    @NotNull
-    @NotBlank
     private Date entryTime;
 
 
     private Date exitTime;
 
 
-    private Number totalCost;
+    private Integer totalCost;
 }

@@ -20,14 +20,13 @@ public class UpdateParkingSlipResource {
 
     @NotNull
     @NotBlank
-    private Reservation reservation;
+    private Long reservationId;
 
     private Date entryTime;
 
 
     private Date exitTime;
 
-    @NotNull
-    @NotBlank
-    private Number totalCost;
+
+    private Integer totalCost;
 }
