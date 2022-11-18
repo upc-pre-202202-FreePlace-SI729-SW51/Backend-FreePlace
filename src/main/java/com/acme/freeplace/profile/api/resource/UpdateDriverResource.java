@@ -1,4 +1,4 @@
-package com.acme.freeplace.profile.resource;
+package com.acme.freeplace.profile.api.resource;
 
 import com.acme.freeplace.profile.domain.model.entity.CreditCard;
 import lombok.Getter;

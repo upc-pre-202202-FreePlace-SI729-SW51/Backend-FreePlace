@@ -19,7 +19,7 @@ import java.util.List;
 @AllArgsConstructor
 @Entity
 @Table(name = "drivers")
-public class Driver{
+public class Driver extends User{
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
