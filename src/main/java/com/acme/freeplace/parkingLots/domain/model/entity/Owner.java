@@ -1,6 +1,7 @@
 package com.acme.freeplace.parkingLots.domain.model.entity;
 
 
+import com.acme.freeplace.profile.domain.model.entity.User;
 import lombok.*;
 
 import javax.persistence.*;
@@ -15,7 +16,7 @@ import javax.validation.constraints.Size;
 @AllArgsConstructor
 @Entity
 @Table(name = "owners")
-public class Owner {
+public class Owner extends User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

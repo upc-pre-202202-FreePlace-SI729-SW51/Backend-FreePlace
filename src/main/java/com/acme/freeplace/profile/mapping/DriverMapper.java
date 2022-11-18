@@ -1,9 +1,9 @@
 package com.acme.freeplace.profile.mapping;
 
 import com.acme.freeplace.profile.domain.model.entity.Driver;
-import com.acme.freeplace.profile.resource.CreateDriverResource;
-import com.acme.freeplace.profile.resource.DriverResource;
-import com.acme.freeplace.profile.resource.UpdateDriverResource;
+import com.acme.freeplace.profile.api.resource.CreateDriverResource;
+import com.acme.freeplace.profile.api.resource.DriverResource;
+import com.acme.freeplace.profile.api.resource.UpdateDriverResource;
 import com.acme.freeplace.shared.mapping.EnhancedModelMapper;
 
 import org.springframework.beans.factory.annotation.Autowired;

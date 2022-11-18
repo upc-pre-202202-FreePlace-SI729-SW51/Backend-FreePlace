@@ -2,8 +2,10 @@ package com.acme.freeplace.parkingLots.resource;
 
 import lombok.*;
 
+import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 @Getter
 @Setter
@@ -32,6 +34,14 @@ public class CreateOwnerResource {
     @NotBlank
     private String ownerType;
 
-
+    @NotNull
+    @NotBlank
+    private String username;
+    @NotNull
+    @NotBlank
+    private String email;
+    @NotNull
+    @NotBlank
+    private String password;
 
 }

@@ -3,11 +3,14 @@ package com.acme.freeplace.profile.service;
 import com.acme.freeplace.profile.domain.model.entity.Driver;
 import com.acme.freeplace.profile.domain.persistence.DriverRepository;
 import com.acme.freeplace.profile.domain.service.DriverService;
+import com.acme.freeplace.shared.domain.model.AccountType;
 import com.acme.freeplace.shared.excepion.ResourceNotFoundException;
 import com.acme.freeplace.shared.excepion.ResourceValidationException;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import javax.validation.ConstraintViolation;
@@ -21,6 +24,9 @@ public class DriverServiceImpl implements DriverService {
     private static final String ENTITY = "Driver";
 
     private final DriverRepository driverRepository;
+
+    @Autowired
+    private PasswordEncoder encoder;
 
     private final Validator validator;
 
@@ -60,6 +66,9 @@ public class DriverServiceImpl implements DriverService {
         if(driverWithName != null)
             throw new ResourceValidationException(ENTITY,
                     "An driver with the same name already exists.");
+
+        driver.setAccountType(AccountType.DRIVER);
+        driver.setPassword(encoder.encode(driver.getPassword()));
 
         return driverRepository.save(driver);
     }

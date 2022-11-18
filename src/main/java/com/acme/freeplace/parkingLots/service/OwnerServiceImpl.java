@@ -3,10 +3,13 @@ package com.acme.freeplace.parkingLots.service;
 import com.acme.freeplace.parkingLots.domain.model.entity.Owner;
 import com.acme.freeplace.parkingLots.domain.persistence.OwnerRepository;
 import com.acme.freeplace.parkingLots.domain.service.OwnerService;
+import com.acme.freeplace.shared.domain.model.AccountType;
 import com.acme.freeplace.shared.excepion.ResourceNotFoundException;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import javax.validation.Validator;
@@ -17,6 +20,8 @@ public class OwnerServiceImpl implements OwnerService {
 
     private static final String ENTITY = "OwnerCompany";
 
+    @Autowired
+    private PasswordEncoder encoder;
 
     private final OwnerRepository ownerRepository;
 
@@ -46,6 +51,9 @@ public class OwnerServiceImpl implements OwnerService {
 
     @Override
     public Owner create(Owner owner) {
+
+        owner.setAccountType(AccountType.OWNER);
+        owner.setPassword(encoder.encode(owner.getPassword()));
         return ownerRepository.save(owner);
     }
 

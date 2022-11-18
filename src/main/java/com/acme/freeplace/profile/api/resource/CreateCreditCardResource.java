@@ -1,4 +1,4 @@
-package com.acme.freeplace.profile.resource;
+package com.acme.freeplace.profile.api.resource;
 
 import lombok.*;
 
@@ -11,15 +11,10 @@ import java.util.Date;
 @With
 @NoArgsConstructor
 @AllArgsConstructor
-public class CreditCardResource {
-
-    private Long id;
+public class CreateCreditCardResource {
 
     private String type;
-
     private String cardNumber;
-
     private Date dateExpiration;
-
     private String cvi;
 }
