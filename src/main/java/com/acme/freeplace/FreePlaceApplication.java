@@ -10,12 +10,12 @@ import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 
 @OpenAPIDefinition
 @EnableJpaAuditing
-@SecurityScheme(
+/*@SecurityScheme(
         name = "Bearer Authentication",
         type = SecuritySchemeType.HTTP,
         bearerFormat = "JWT",
         scheme = "bearer"
-)
+)*/
 @SpringBootApplication()
 public class FreePlaceApplication {
 

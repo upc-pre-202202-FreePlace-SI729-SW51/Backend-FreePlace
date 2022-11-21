@@ -14,7 +14,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@SecurityRequirement(name = "Bearer Authentication")
+//@SecurityRequirement(name = "Bearer Authentication")
 @RequestMapping(value = "/api/v1/drivers", produces = "application/json")
 public class DriverController {
 
@@ -38,6 +38,11 @@ public class DriverController {
     @GetMapping("{driverId}")
     public DriverResource getDriverById(@PathVariable Long driverId) {
         return mapper.toResource(driverService.getById(driverId));
+    }
+
+    @GetMapping("/username/{username}")
+    public DriverResource getDriverByUsername(@PathVariable String username) {
+        return mapper.toResource(driverService.getByUsername(username));
     }
 
     @PostMapping

@@ -20,4 +20,6 @@ public class DriverResource {
     private String contact;
 
     private String vehicleNumber;
+
+    private String password;
 }

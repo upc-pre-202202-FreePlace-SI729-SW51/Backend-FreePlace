@@ -54,22 +54,15 @@ public class DriverServiceImpl implements DriverService {
     }
 
     @Override
+    public Driver getByUsername(String username) {
+        return driverRepository.findDriverByUsername(username);
+    }
+
+    @Override
     public Driver create(Driver driver) {
-        Set<ConstraintViolation<Driver>> violations = validator.validate(driver);
-
-        if (!violations.isEmpty())
-            throw new ResourceValidationException(ENTITY, violations);
-
-        // Name Uniqueness validation
-        Driver driverWithName = driverRepository.findByVehicleNumber(driver.getVehicleNumber());
-
-        if(driverWithName != null)
-            throw new ResourceValidationException(ENTITY,
-                    "An driver with the same name already exists.");
 
         driver.setAccountType(AccountType.DRIVER);
-        driver.setPassword(encoder.encode(driver.getPassword()));
-
+        //driver.setPassword(encoder.encode(driver.getPassword()));
         return driverRepository.save(driver);
     }
 

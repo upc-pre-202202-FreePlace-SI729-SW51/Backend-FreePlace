@@ -53,7 +53,7 @@ public class OwnerServiceImpl implements OwnerService {
     public Owner create(Owner owner) {
 
         owner.setAccountType(AccountType.OWNER);
-        owner.setPassword(encoder.encode(owner.getPassword()));
+        //owner.setPassword(encoder.encode(owner.getPassword()));
         return ownerRepository.save(owner);
     }
 

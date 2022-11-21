@@ -84,7 +84,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).and()
                 .authorizeRequests()
                 .and().cors().and().csrf().disable().authorizeRequests()
-                /*.antMatchers("/api/v1/parkingSlip/**").permitAll()
+                .antMatchers("/api/v1/parkingSlip/**").permitAll()
                 .antMatchers("/api/v1/reservation/**").permitAll()
                 .antMatchers("/api/login/**").permitAll()
                 .antMatchers("/api/user/**").permitAll()
@@ -96,7 +96,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/freelance-world-crud-api-docs/**").permitAll()
                 .antMatchers("/swagger-ui/**").permitAll()
                 .antMatchers("/free-place-api-docs-ui.html").permitAll()
-                .antMatchers("/free-place-api-docs-ui.html/**").permitAll()*/
+                .antMatchers("/free-place-api-docs-ui.html/**").permitAll()
                 .antMatchers(HttpMethod.POST, "/api/v1/owner").permitAll()
                 .antMatchers(HttpMethod.POST, "/api/v1/drivers").permitAll()
                 .antMatchers("/api/login/**").permitAll()

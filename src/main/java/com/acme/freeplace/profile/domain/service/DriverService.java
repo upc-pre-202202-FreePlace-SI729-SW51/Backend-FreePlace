@@ -12,6 +12,7 @@ public interface DriverService {
     List<Driver> getAll();
     Page<Driver> getAll(Pageable pageable);
     Driver getById(Long driverId);
+    Driver getByUsername(String username);
     Driver create(Driver driver);
     Driver update(Long driverId, Driver request);
     ResponseEntity<?> delete(Long driverId);
