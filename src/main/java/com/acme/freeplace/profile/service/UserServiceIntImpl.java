@@ -20,7 +20,9 @@ public class UserServiceIntImpl implements UserServiceInt {
         if(userRepository.findByUsername(user.getUsername())!=null)
             return userRepository.findByUsername(user.getUsername());
 //        District district = districtRepository.findById(districtId).orElseThrow(() -> new ResourceNotFoundException("District", "Id", districtId));
-        user.setPassword(encoder.encode(user.getPassword()));
+
+        //user.setPassword(encoder.encode(user.getPassword()));
+
 //        freelancer.setDistrict(district);
         User saved = userRepository.save(user);
         return saved;
