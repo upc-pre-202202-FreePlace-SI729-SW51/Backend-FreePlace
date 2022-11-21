@@ -1,4 +1,4 @@
-package com.acme.freeplace.profile.api.resource;
+package com.acme.freeplace.profile.resource;
 
 import com.acme.freeplace.profile.domain.model.entity.CreditCard;
 import lombok.*;
@@ -27,11 +27,5 @@ public class CreateDriverResource {
     private String contact;
 
     private String vehicleNumber;
-
-    private String username;
-
-    private String email;
-
-    private String password;
 
 }

@@ -52,7 +52,7 @@ public class OwnerServiceImpl implements OwnerService {
     @Override
     public Owner create(Owner owner) {
 
-        owner.setAccountType(AccountType.OWNER);
+        //owner.setAccountType(AccountType.OWNER);
         //owner.setPassword(encoder.encode(owner.getPassword()));
         return ownerRepository.save(owner);
     }

@@ -1,11 +1,10 @@
 package com.acme.freeplace.profile.api.rest;
 
-import com.acme.freeplace.profile.api.resource.SaveUserResource;
-import com.acme.freeplace.profile.api.resource.UserResource;
+import com.acme.freeplace.profile.resource.SaveUserResource;
+import com.acme.freeplace.profile.resource.UserResource;
 import com.acme.freeplace.profile.domain.model.entity.User;
 import com.acme.freeplace.profile.domain.persistence.UserRepository;
 import com.acme.freeplace.profile.domain.service.UserServiceInt;
-import com.acme.freeplace.profile.service.UserServiceIntImpl;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

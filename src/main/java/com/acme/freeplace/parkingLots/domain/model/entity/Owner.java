@@ -16,7 +16,7 @@ import javax.validation.constraints.Size;
 @AllArgsConstructor
 @Entity
 @Table(name = "owners")
-public class Owner extends User {
+public class Owner{
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -36,7 +36,6 @@ public class Owner extends User {
 
     @NotNull
     @NotBlank
-    @Size(max = 9)
     private String contact;
 
     @NotNull

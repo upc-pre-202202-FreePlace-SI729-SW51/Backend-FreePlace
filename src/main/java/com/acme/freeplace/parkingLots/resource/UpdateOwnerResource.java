@@ -30,4 +30,6 @@ public class UpdateOwnerResource {
     @NotBlank
     private String ownerType;
 
+
+
 }

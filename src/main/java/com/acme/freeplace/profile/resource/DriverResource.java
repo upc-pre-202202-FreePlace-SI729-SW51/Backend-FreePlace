@@ -1,4 +1,4 @@
-package com.acme.freeplace.profile.api.resource;
+package com.acme.freeplace.profile.resource;
 
 import lombok.*;
 

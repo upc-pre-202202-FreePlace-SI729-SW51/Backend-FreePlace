@@ -1,8 +1,8 @@
 package com.acme.freeplace.profile.api.rest;
 
-import com.acme.freeplace.profile.api.resource.CreateCreditCardResource;
-import com.acme.freeplace.profile.api.resource.CreditCardResource;
-import com.acme.freeplace.profile.api.resource.UpdateCreditCardResource;
+import com.acme.freeplace.profile.resource.CreateCreditCardResource;
+import com.acme.freeplace.profile.resource.CreditCardResource;
+import com.acme.freeplace.profile.resource.UpdateCreditCardResource;
 import com.acme.freeplace.profile.domain.service.CreditCardService;
 import com.acme.freeplace.profile.mapping.CreditCardMapper;
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
@@ -13,7 +13,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@SecurityRequirement(name = "Bearer Authentication")
 @RequestMapping(value = "/api/v1/creditCard", produces = "application/json")
 public class CreditCardsController {
 

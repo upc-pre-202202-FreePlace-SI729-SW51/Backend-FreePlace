@@ -1,8 +1,8 @@
 package com.acme.freeplace.profile.mapping;
 
-import com.acme.freeplace.profile.api.resource.CreateCreditCardResource;
-import com.acme.freeplace.profile.api.resource.CreditCardResource;
-import com.acme.freeplace.profile.api.resource.UpdateCreditCardResource;
+import com.acme.freeplace.profile.resource.CreateCreditCardResource;
+import com.acme.freeplace.profile.resource.CreditCardResource;
+import com.acme.freeplace.profile.resource.UpdateCreditCardResource;
 import com.acme.freeplace.profile.domain.model.entity.CreditCard;
 import com.acme.freeplace.shared.mapping.EnhancedModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;

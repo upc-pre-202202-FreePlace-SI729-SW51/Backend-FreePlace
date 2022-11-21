@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping(value = "/api/v1/owner", produces = "application/json")
+@CrossOrigin(origins = "*")
 public class OwnerController {
 
     private final OwnerService ownerService;

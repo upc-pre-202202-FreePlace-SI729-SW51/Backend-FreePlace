@@ -34,14 +34,6 @@ public class CreateOwnerResource {
     @NotBlank
     private String ownerType;
 
-    @NotNull
-    @NotBlank
-    private String username;
-    @NotNull
-    @NotBlank
-    private String email;
-    @NotNull
-    @NotBlank
-    private String password;
+
 
 }
